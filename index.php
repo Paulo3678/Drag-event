@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +24,9 @@
 
 
     <div>
+        <div class="links">
+            <a href="./listar-imagens.php">Ver imagens já criadas</a>
+        </div>
         <div class="area-card">
 
             <div class="opcoes-icones">
@@ -57,7 +62,7 @@
                 <div id="bg4" class="bg-opt"></div>
             </div>
         </div>
-        <a id="download">Download</a>
+        <button id="download">Salvar Imagem</button>
 
         <!-- <form>
             <input type="hidden" name="image" id="image-data">

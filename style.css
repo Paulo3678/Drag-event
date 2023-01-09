@@ -10,6 +10,20 @@ body {
     display: flex;
     justify-content: center;
 }
+.links {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.links a{
+    background-color: #68B984;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    display: inline-block;
+}
 
 /* FUNDOS */
 
