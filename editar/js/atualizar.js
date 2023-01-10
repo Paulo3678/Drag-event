@@ -8,8 +8,7 @@ $(document).ready(function () {
         let element = $("#image-to-download");
         html2canvas(element, {
             onrendered: function (canvas) {
-                let info_element = [];
-                let background = window.getComputedStyle(document.querySelector("#image-to-download"), null).getPropertyValue("background-color");
+                let info_element;
                 element.children().each((id, node_element) => {
 
                     let element_class = [];
@@ -18,14 +17,13 @@ $(document).ready(function () {
                         element_class.push(e);
                     })
 
-                    info_element.push({
+                    info_element = {
                         right: window.getComputedStyle(node_element, null).getPropertyValue("right"),
                         left: window.getComputedStyle(node_element, null).getPropertyValue("left"),
                         top: window.getComputedStyle(node_element, null).getPropertyValue("top"),
                         bottom: window.getComputedStyle(node_element, null).getPropertyValue("bottom"),
-                        classes: element_class,
-                        background: background
-                    });
+                        classes: element_class
+                    };
 
                 })
 
@@ -33,15 +31,15 @@ $(document).ready(function () {
 
                 // send the image data to the server using an AJAX request
                 $.ajax({
-                    type: 'POST',
-                    url: 'upload.php',
-                    data: { image: imageData, image_info: info_element },
-                    success: function (response) {
-                        console.log(response);
-                    },
-                    error: function (error) {
-                        console.error(error);
-                    }
+                  type: 'POST',
+                  url: 'atualizar.php',
+                  data: {image: imageData, image_info: info_element}, 
+                  success: function(response) {
+                    console.log(response);
+                  },
+                  error: function(error) {
+                    console.error(error);
+                  }
                 });
 
             }

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,26 +30,20 @@
             <div class="opcoes-icones">
                 <h2>Adicionar Item</h2>
                 <div class="card-icon">
-                    <i class="fa-solid fa-house"></i>
+                    <i class="icon-element fa-solid fa-house"></i>
                 </div>
                 <div class="card-icon">
-                    <i class="fa-brands fa-discord"></i>
+                    <i class="icon-element fa-brands fa-discord"></i>
                 </div>
                 <div class="card-icon">
-                    <i class="fa-regular fa-face-smile"></i>
+                    <i class="icon-element fa-regular fa-face-smile"></i>
                 </div>
                 <div class="card-icon">
-                    <i class="fa-solid fa-truck-fast"></i>
+                    <i class="icon-element fa-solid fa-truck-fast"></i>
                 </div>
             </div>
 
             <div class="card-imagem" id="image-to-download">
-                <div id="drag_me" class="teste-drag">
-                    <i class="fa-regular fa-face-smile"></i>
-                </div>
-                <div class="teste-drag">
-                    <i class="fa-solid fa-truck-fast"></i>
-                </div>
             </div>
 
             <div class="opcoes-fundo">

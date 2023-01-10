@@ -27,6 +27,9 @@ $imagens = buscarImagensDoUsuario($conn, 1);
         .area-imagens {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
+            width: 1200px;
+            margin: 0 auto;
         }
 
         .card-imagem {
@@ -35,6 +38,7 @@ $imagens = buscarImagensDoUsuario($conn, 1);
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 20px;
         }
 
         .card-imagem img {
@@ -57,6 +61,29 @@ $imagens = buscarImagensDoUsuario($conn, 1);
             text-align: center;
             font-size: 1.3rem;
         }
+
+        .editar-btn {
+            background-color: #FFB100;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .voltar{
+            background-color: #58287F;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
     </style>
     <div class="area-imagens">
         <?php foreach ($imagens as $key => $imagem) { ?>
@@ -66,11 +93,14 @@ $imagens = buscarImagensDoUsuario($conn, 1);
                 <a href="<?= $imagem['diretorio_imagem'] ?>" class="download-btn" download>
                     Download
                 </a>
+                <a href="./editar-imagem.php?imagem_id=<?= $imagem['id_imagem'] ?>" class="editar-btn">
+                    Editar
+                </a>
             </div>
         <?php } ?>
     </div>
     <div>
-        <a href="./index.php">Voltar</a>
+        <a href="./index.php" class="voltar">Voltar</a>
     </div>
 </body>
 
